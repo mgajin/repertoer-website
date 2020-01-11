@@ -1,0 +1,88 @@
+html body {
+    p {
+        margin: 0;
+    }
+    color: $dark;
+}
+
+.overlay {
+    position: relative;
+    height: 40vh;
+    background:  url('../../imgs/bgimage.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  
+.overlay:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.8;
+    background-color: $dark-red;
+}
+
+header {
+    background: rgba(0, 0, 0, 10);
+    // background: $dark-red;
+    min-height: 7vh;
+    width: 100%;
+    // position: fixed;
+    // z-index: 10;
+   
+    .navbar {
+        
+        .navbar-brand {
+            color: $yellow;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .navbar-brand:hover {
+            color: $yellow;
+        }
+
+        .navbar-collapse {
+        
+            justify-content: flex-end;
+            
+            .navbar-nav {
+                .nav-link {
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    color: $light;
+                }
+                .active {
+                    color: $yellow;
+                }
+    
+            }
+        }
+    }
+}
+
+button {
+    background: none;
+    border: solid 1.5px $light;
+    border-radius: 3px;
+    color: $dark;
+    letter-spacing: 1px;
+    min-height: 2em;
+}
+
+footer {
+    background: black;
+    color: $light;
+
+    p {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
