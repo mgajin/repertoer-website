@@ -1,5 +1,74 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Repertoer</h1>
+<div class="overlay d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4" id="box">
+                <select name="" id="">
+                    <option value="">Cineplexx Usce</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4" id="box">
+                <select name="" id="">
+                    <option value="">Action</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-4" id="box">
+                <div class="input-group">
+                    <input type="text" placeholder="Movie Title">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="repertoer container">
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <div class="movie">
+                <img src="assets/imgs/seven.jpg">
+                <div id="info">
+                    <div class="movie-title">
+                        <h5>Seven</h5>
+                    </div>
+                    <p><i class="fas fa-star"></i> 8 / thriller</p>
+                    <button>Buy Tickets</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="assets/imgs/django.jpg">
+                <div id="info">
+                    <div class="movie-title">
+                        <h5>Django</h5>
+                    </div>
+                    <p><i class="fas fa-star"></i> 8 / action</p>
+                    <button>Buy Tickets</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="assets/imgs/imitation_game.jpg">
+                <div id="info">
+                    <div class="movie-title">
+                        <h5>The Imitation Game</h5>
+                    </div>
+                    <p><i class="fas fa-star"></i> 8 / drama</p>
+                    <button>Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="cinema">
+                <img src="">
+                <div id="info">
+                    <h5>Cineplexx Usce</h5>
+                    <p>Bulevar Mihajla Pupina 4</p>
+                    <p>11070 Beograd</p>
+                    <p>+381 11 311 33 70</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
