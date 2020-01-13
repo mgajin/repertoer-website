@@ -9,7 +9,7 @@ html body p {
 .overlay {
   position: relative;
   height: 40vh;
-  background: url("../../imgs/bgimage.jpg");
+  background: url("../../img/bgimage.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -99,7 +99,7 @@ footer p {
           justify-content: center;
   min-height: 93vh;
   text-align: center;
-  background-image: url("../../imgs/bg3.jpg");
+  background: url("../../img/bg3.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -169,7 +169,10 @@ footer p {
           justify-content: center;
 }
 
-.row .col-6, .row .col-sm-4, .row .col-md-3, .row .col-lg-2 {
+.row .col-6,
+.row .col-sm-4,
+.row .col-md-3,
+.row .col-lg-2 {
   padding: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;

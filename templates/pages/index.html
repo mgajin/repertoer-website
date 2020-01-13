@@ -1,5 +1,116 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-<h1>Home</h1>
+
+<div class="movies-carousel">
+    <h3>Latest Published</h3>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="movie">
+                    <img src="imgs/django.jpg">
+                    <div id="info">
+                        <h5>Movie Title</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="movie">
+                    <img src="imgs/star_wars.jpg">
+                    <div id="info">
+                        <h5>Movie Title</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="movie">
+                    <img src="imgs/blade_runner.jpg">
+                    <div id="info">
+                        <h5>Movie Title</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Showcase -->
+<section class="movies container">
+    <h3>Top Rated</h3>
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/blade_runner.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/avengers_endgame.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/inception.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/memento.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/star_wars.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie">
+                <img src="imgs/django.jpg">
+                <div id="info">
+                    <p>Thriller</p>
+                    <p><i class="fas fa-star"></i> 8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button><a href="repertoer.html">See Repertoer</a></button>
+    </div>
+</section>
+
 {% endblock %}
