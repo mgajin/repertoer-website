@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # my apps
     'pages.apps.PagesConfig',
+    'movies.apps.MoviesConfig',
+    'cinemas.apps.CinemasConfig',
     # 
     'django.contrib.admin',
     'django.contrib.auth',
