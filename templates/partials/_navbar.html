@@ -11,6 +11,11 @@
                 {% else %} class="nav-item nav-link"
                 href="{% url 'index' %}">Home</a>
                 {% endif %}
+                <a {% if '/movies/' == request.path %} class="nav-item nav-link active"
+                    href="{% url 'movies' %}">Movies</a>
+                {% else %} class="nav-item nav-link"
+                href="{% url 'movies' %}">Movies</a>
+                {% endif %}
                 <a {% if '/repertoer' == request.path %} class="nav-item nav-link active"
                     href="{% url 'repertoer' %}">Repertoer</a>
                 {% else %} class="nav-item nav-link"
