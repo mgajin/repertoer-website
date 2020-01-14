@@ -4,7 +4,8 @@ from .models import Movie
 
 def index(request):
 
-    movies = Movie.objects.all()
+    # movies = Movie.objects.all()
+    movies = Movie.objects.order_by('title')
 
     context = {
         'movies': movies
