@@ -3,60 +3,27 @@
 {% block content %}
 <section class="movies container">
     <div class="row">
+
+        {% if movies %}
+        {% for movie in movies %}
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="movie">
-                <img src="imgs/blade_runner.jpg">
+                <img src="{{movie.poster.url}}">
                 <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
+                    <p>{{movie.genre}}</p>
+                    <p><i class="fas fa-star"></i> {{movie.rating}}</p>
                 </div>
+                <a href="{% url 'movie' movie.id %}">More Info</a>
             </div>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="movie">
-                <img src="imgs/avengers_endgame.jpg">
-                <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
-                </div>
-            </div>
+        {% endfor %}
+        {% else %}
+        <div class="col-12">
+            <p>No Movies Available</p>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="movie">
-                <img src="imgs/inception.jpg">
-                <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="movie">
-                <img src="imgs/memento.jpg">
-                <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="movie">
-                <img src="imgs/star_wars.jpg">
-                <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="movie">
-                <img src="imgs/django.jpg">
-                <div id="info">
-                    <p>Thriller</p>
-                    <p><i class="fas fa-star"></i> 8</p>
-                </div>
-            </div>
-        </div>
+
+        {% endif %}
+
     </div>
 </section>
 {% endblock %}

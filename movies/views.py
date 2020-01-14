@@ -1,11 +1,18 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Movie
 
 def index(request):
-    return render(request, 'movies/movies.html')
 
-def movie(request):
+    movies = Movie.objects.all()
+
+    context = {
+        'movies': movies
+    }
+
+    return render(request, 'movies/movies.html', context)
+
+def movie(request, movie_id):
     return render(request, 'movies/movie.html')
 
 def search(request):
