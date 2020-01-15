@@ -3,32 +3,35 @@
 {% block content %}
 <div class="overlay d-flex align-items-center">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4" id="box">
-                <select name="" id="">
-                    {% if cinemas %}
-                    {% for cinema in cinemas %}
-                    <option value="{{cinema.id}}">{{cinema}}</option>
-                    {% endfor %}
-                    {% endif %}
-                </select>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4" id="box">
-                <select name="" id="">
-                    {% if genres %}
-                    {% for genre in genres %}
-                    <option value="{{genre}}">{{genre}}</option>
-                    {% endfor %}
-                    {% endif %}
-                </select>
-            </div>
-            <div class="col-12 col-md-4" id="box">
-                <div class="input-group">
-                    <input type="text" placeholder="Movie Title">
-                    <button><i class="fas fa-search"></i></button>
+        <form action="{% url 'repertoer' %}">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4" id="box">
+                    <select name="cinema">
+                        {% if cinemas %}
+                        {% for cinema in cinemas %}
+                        <option value="{{cinema.id}}">{{cinema}}</option>
+                        {% endfor %}
+                        {% endif %}
+                    </select>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4" id="box">
+                    <select name="genre">
+                        {% if genres %}
+                        {% for genre in genres %}
+                        <option value="{{genre}}">{{genre}}</option>
+                        {% endfor %}
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="col-12 col-md-4" id="box">
+                    <div class="input-group">
+                        <input type="text" name="title" placeholder="Movie Title">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- <button class="col-12 btn" type="submit">Filter</button> -->
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
