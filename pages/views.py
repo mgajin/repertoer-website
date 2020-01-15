@@ -20,7 +20,7 @@ def index(request):
 def repertoer(request):
 
     cinemas = Cinema.objects.all()
-    genres = ['Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime']
+    genres = ['All', 'Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime']
 
     context = {
         'cinemas': cinemas,
