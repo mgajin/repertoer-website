@@ -51,4 +51,3 @@ def repertoer(request):
     }
 
     return render(request, 'pages/repertoer.html', context)
-
