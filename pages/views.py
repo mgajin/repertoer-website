@@ -21,10 +21,12 @@ def repertoer(request):
 
     cinemas = Cinema.objects.all()
     genres = ['All', 'Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime']
+    movies = Movie.objects.all()
 
     context = {
         'cinemas': cinemas,
-        'genres': genres
+        'genres': genres,
+        'movies': movies
     }
 
     return render(request, 'pages/repertoer.html', context)
