@@ -15,6 +15,3 @@ def index(request):
 
 def movie(request, movie_id):
     return render(request, 'movies/movie.html')
-
-def search(request):
-    return render(request, 'movies/search.html')
