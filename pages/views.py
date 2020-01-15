@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from movies.models import Movie 
+from movies.models import Movie
+from cinemas.models import Cinema 
 
 def index(request):
 
@@ -17,5 +18,14 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 def repertoer(request):
-    return render(request, 'pages/repertoer.html')
+
+    cinemas = Cinema.objects.all()
+    genres = ['Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime']
+
+    context = {
+        'cinemas': cinemas,
+        'genres': genres
+    }
+
+    return render(request, 'pages/repertoer.html', context)
 
