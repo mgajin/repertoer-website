@@ -9,7 +9,6 @@ def index(request):
     latest_movies = Movie.objects.order_by('-released')[:5]
     top_rated = Movie.objects.order_by('-rating')[:6]
 
-
     context = {
         'latest_movies': latest_movies,
         'top_rated': top_rated
@@ -19,27 +18,33 @@ def index(request):
 
 def repertoer(request):
 
-    queryset_list = Movie.objects.order_by('title')
+    genres = ['All', 'Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime', 'Adventure']
+    cinemas = Cinema.objects.all()
+
+    # Get selected cinema 
+    cinema = Cinema.objects.get(name=request.GET['cinema'])
+    
+    # Get moies in selected cinema
+    movies = Movie.objects.filter(cinema=cinema.id).order_by('title')
 
     # Search movie by title
     if 'title' in request.GET:
         title = request.GET['title']
         if title:
-            queryset_list = queryset_list.filter(title__icontains=title)
+            movies = movies.filter(title__icontains=title)
 
     # Filter movies by genre 
     if 'genre' in request.GET:
         genre = request.GET['genre']
         if genre != 'All':
-            queryset_list = queryset_list.filter(genre__icontains=genre)
-
-    cinemas = Cinema.objects.all()
-    genres = ['All', 'Action', 'Comedy', 'Drama', 'Sci-Fi', 'Thriller', 'Crime']
+            movies = movies.filter(genre__icontains=genre)
 
     context = {
+        'cinema': cinema,
         'cinemas': cinemas,
         'genres': genres,
-        'movies': queryset_list
+        'movies': movies,
+        'values': request.GET
     }
 
     return render(request, 'pages/repertoer.html', context)

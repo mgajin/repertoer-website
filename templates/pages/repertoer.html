@@ -9,7 +9,9 @@
                     <select name="cinema">
                         {% if cinemas %}
                         {% for cinema in cinemas %}
-                        <option value="{{cinema.id}}">{{cinema}}</option>
+                        <option value="{{cinema}}" {% if cinema.name == values.cinema %} selected {% endif %}>
+                            {{cinema}}
+                        </option>
                         {% endfor %}
                         {% endif %}
                     </select>
@@ -18,7 +20,9 @@
                     <select name="genre">
                         {% if genres %}
                         {% for genre in genres %}
-                        <option value="{{genre}}">{{genre}}</option>
+                        <option value="{{genre}}" {% if genre == values.genre %} selected {% endif %}>
+                            {{genre}}
+                        </option>
                         {% endfor %}
                         {% endif %}
                     </select>
@@ -59,12 +63,12 @@
         </div>
         <div class="col-12 col-md-5">
             <div class="cinema">
-                <img src="">
+                <img src="{{cinema.photo.url}}">
                 <div id="info">
-                    <h5>Cineplexx Usce</h5>
-                    <p>Bulevar Mihajla Pupina 4</p>
-                    <p>11070 Beograd</p>
-                    <p>+381 11 311 33 70</p>
+                    <h5>{{ cinema.name }}</h5>
+                    <p>{{ cinema.address }}</p>
+                    <p>{{ cinema.city }}</p>
+                    <p>{{ cinema.phone }}</p>
                 </div>
             </div>
         </div>
