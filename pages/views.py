@@ -22,7 +22,10 @@ def repertoer(request):
     cinemas = Cinema.objects.all()
 
     # Get selected cinema 
-    cinema = Cinema.objects.get(name=request.GET['cinema'])
+    if 'cinema' in request.GET:
+        cinema = Cinema.objects.get(name=request.GET['cinema'])
+    else:
+        cinema = Cinema.objects.get(id=1)
     
     # Get moies in selected cinema
     movies = Movie.objects.filter(cinema=cinema.id).order_by('title')
