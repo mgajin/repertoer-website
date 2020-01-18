@@ -1,0 +1,45 @@
+.page {
+    min-height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#login {
+
+    max-width: 300px;
+
+    color: $dark;
+
+    h3 {
+        width: 100%;
+        background: $dark-red;
+        border-radius: 5px;
+        color: $light;
+        margin: 0.5em 0;
+        padding: 0;
+        height: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        border-radius: 0;
+        border: none;
+        border-bottom: solid 1.5px $light;
+    }
+
+    a {
+        margin: 0.5em 0;
+        padding: 0;
+    }
+
+}

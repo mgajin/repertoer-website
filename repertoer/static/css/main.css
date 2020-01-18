@@ -9,7 +9,7 @@ html body p {
 .overlay {
   position: relative;
   height: 40vh;
-  background: url("../../img/bgimage.jpg");
+  background: url(../imgs/bgimage.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -23,7 +23,7 @@ html body p {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  background-color: #532a2b;
+  background-color: #492526;
 }
 
 header {
@@ -99,7 +99,7 @@ footer p {
           justify-content: center;
   min-height: 93vh;
   text-align: center;
-  background: url("../../img/bg3.jpg");
+  background: url(../imgs/bg3.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -173,10 +173,12 @@ footer p {
 .row .col-sm-4,
 .row .col-md-3,
 .row .col-lg-2 {
-  padding: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -198,11 +200,32 @@ footer p {
 }
 
 .movies {
+  margin-top: 0.5em;
   text-align: center;
 }
 
+.movies .row {
+  padding: 0 0.5em;
+}
+
+.movies .row .col-6,
+.movies .row .col-sm-4,
+.movies .row .col-md-3,
+.movies .row .col-lg-2 {
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .movies h3 {
-  padding-top: 0.5em;
+  padding: 0.5em;
   letter-spacing: 1px;
 }
 
@@ -258,32 +281,32 @@ footer p {
   color: #EDC239;
 }
 
-#filter-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #e6e6e6;
-  height: 3em;
-  border-radius: 3px;
-  margin-top: 1.5em;
-  color: #1f1f24;
-  font-style: italic;
-  letter-spacing: 1.5px;
-  text-transform: capitalize;
+#filter select {
+  border-radius: 5px;
+  width: 100%;
 }
 
-#filter-menu h5 {
-  padding-left: 0.5em;
-  margin: 0;
+#filter button {
+  width: 100%;
+  margin: 0.5em 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-#box {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+#filter button:hover {
+  color: #EDC239;
+}
+
+#index {
   z-index: 1;
+}
+
+#search {
+  background: #e6e6e6;
+  padding: 1em 0;
 }
 
 select {
@@ -296,26 +319,27 @@ select {
 }
 
 .input-group {
-  height: 2em;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  padding-left: 0.5em;
+  margin: 0;
 }
 
 .input-group input {
-  width: 90%;
+  width: 95%;
+  background: none;
+  margin: 0;
   border: none;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background: rgba(255, 255, 255, 0.8);
   padding-left: 0.5em;
 }
 
 .input-group button {
-  width: 10%;
   padding: 0;
   margin: 0;
   border: none;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background: rgba(255, 255, 255, 0.8);
+  color: #1f1f24;
 }
 
 .movie-title {
@@ -415,45 +439,65 @@ select {
   text-transform: uppercase;
 }
 
-#header {
-  height: 10vh;
-  background: black;
+.page {
+  min-height: 83vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#login {
+  max-width: 300px;
+  color: #1f1f24;
+}
+
+#login h3 {
+  width: 100%;
+  background: #492526;
+  border-radius: 5px;
   color: #e6e6e6;
-  letter-spacing: 1px;
+  margin: 0.5em 0;
+  padding: 0;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#branding h1 {
-  color: #EDC239;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+#login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-a:link,
-a:visited {
-  color: #532a2b;
-}
-
-div.breadcrumbs {
-  color: #EDC239;
-  background: #532a2b;
-}
-
-div.breadcrumbs a {
-  color: #e6e6e6;
-}
-
-div.breadcrumbs a:hover {
-  color: white;
-}
-
-.module h2,
-.module caption,
-.inline-group h2 {
-  background: #532a2b;
-}
-
-select {
-  background: #e6e6e6;
+#login input {
+  border-radius: 0;
   border: none;
+  border-bottom: solid 1.5px #e6e6e6;
+}
+
+#login a {
+  margin: 0.5em 0;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

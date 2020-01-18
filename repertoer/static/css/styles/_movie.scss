@@ -5,7 +5,7 @@
     min-height: 93vh;
     text-align: center;
 
-    background: url('../../img/bg3.jpg');
+    background: url(../imgs/bg3.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -64,8 +64,8 @@
     .col-sm-4,
     .col-md-3,
     .col-lg-2 {
-        padding: 0.5em;
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 }
@@ -81,10 +81,27 @@
 }
 
 .movies {
+
+    margin-top: 0.5em;
+
     text-align: center;
 
+    .row {
+        padding: 0 0.5em;
+
+        .col-6,
+        .col-sm-4,
+        .col-md-3,
+        .col-lg-2 {
+            padding: 0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     h3 {
-        padding-top: 0.5em;
+        padding: 0.5em;
         letter-spacing: 1px;
     }
 
@@ -142,29 +159,35 @@
     }
 }
 
-#filter-menu {
-    display: flex;
-    align-items: center;
-    background: $light;
-    height: 3em;
-    border-radius: 3px;
-    margin-top: 1.5em;
-    color: $dark;
-    font-style: italic;
-    letter-spacing: 1.5px;
-    text-transform: capitalize;
+#filter {
 
-    h5 {
-        padding-left: 0.5em;
-        margin: 0;
+    select {
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 0.5em 0;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        color: $yellow;
     }
 }
 
-#box {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+#index {
     z-index: 1;
+}
 
+#search {
+    background: $light;
+    padding: 1em 0;
 }
 
 select {
@@ -177,25 +200,26 @@ select {
 }
 
 .input-group {
-    height: 2em;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    padding-left: 0.5em;
+    margin: 0;
 
     input {
-        width: 90%;
+        width: 95%;
+        background: none;
+        margin: 0;
         border: none;
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-        background: rgba(255, 255, 255, 0.8);
         padding-left: 0.5em;
     }
 
     button {
-        width: 10%;
         padding: 0;
         margin: 0;
         border: none;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        background: rgba(255, 255, 255, 0.8);
+        color: $dark;
     }
 }
 
