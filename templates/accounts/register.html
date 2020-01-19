@@ -4,24 +4,31 @@
 
 <div class="container page " id="login">
     <h3>Register</h3>
-    <form>
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
         <div class="form-group">
-            <label>Full Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter name">
+            <label>First Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" placeholder="Enter name"
+                required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" placeholder="Enter name"
+                required>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email"
+                required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                placeholder="Password" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Confirm Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
         </div>
         <button type="submit">submit</button>
         <a href="{% url 'login' %}">Sign In</a>
