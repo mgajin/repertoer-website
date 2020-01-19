@@ -30,12 +30,6 @@ def repertoer(request):
     # Get moies in selected cinema
     movies = Movie.objects.filter(cinema=cinema.id).order_by('title')
 
-    # Search movie by title
-    if 'title' in request.GET:
-        title = request.GET['title']
-        if title:
-            movies = movies.filter(title__icontains=title)
-
     # Filter movies by genre 
     if 'genre' in request.GET:
         genre = request.GET['genre']

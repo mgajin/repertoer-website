@@ -7,6 +7,12 @@ def index(request):
     # movies = Movie.objects.all()
     movies = Movie.objects.order_by('title')
 
+# Search movie by title
+    if 'movie' in request.GET:
+        movie = request.GET['movie']
+        if movie:
+            movies = movies.filter(title__icontains=movie)
+
     context = {
         'movies': movies
     }
