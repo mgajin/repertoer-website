@@ -21,6 +21,17 @@
                 {% else %} class="nav-item nav-link"
                 href="{% url 'repertoer' %}">Repertoer</a>
                 {% endif %}
+                <a {% if '/auth/login' == request.path %} class="nav-item nav-link active" href="{% url 'login' %}">Sign
+                    In</a>
+                {% else %} class="nav-item nav-link"
+                href="{% url 'login' %}">Sign In</a>
+                {% endif %}
+                <a {% if '/auth/register' == request.path %} class="nav-item nav-link active"
+                    href="{% url 'register' %}">Sign
+                    Up</a>
+                {% else %} class="nav-item nav-link"
+                href="{% url 'register' %}">Sign Up</a>
+                {% endif %}
             </div>
         </div>
     </nav>

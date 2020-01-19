@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'movies.apps.MoviesConfig',
     'cinemas.apps.CinemasConfig',
+    'accounts.apps.AccountsConfig',
     # 
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1,42 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="overlay d-flex align-items-center">
-    <!-- <div class="container">
-        <form action="{% url 'repertoer' %}">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4" id="box">
-                    <select name="cinema">
-                        {% if cinemas %}
-                        {% for cinema in cinemas %}
-                        <option value="{{cinema}}" {% if cinema.name == values.cinema %} selected {% endif %}>
-                            {{cinema}}
-                        </option>
-                        {% endfor %}
-                        {% endif %}
-                    </select>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4" id="box">
-                    <select name="genre">
-                        {% if genres %}
-                        {% for genre in genres %}
-                        <option value="{{genre}}" {% if genre == values.genre %} selected {% endif %}>
-                            {{genre}}
-                        </option>
-                        {% endfor %}
-                        {% endif %}
-                    </select>
-                </div>
-                <div class="col-12 col-md-4" id="box">
-                    <div class="input-group">
-                        <input type="text" name="title" placeholder="Movie Title">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div> -->
-</div>
+<div class="overlay"></div>
 
 <div id="search">
     <form class="container">
