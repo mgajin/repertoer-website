@@ -9,7 +9,7 @@ html body p {
 .overlay {
   position: relative;
   height: 40vh;
-  background: url(../imgs/bgimage.jpg);
+  background: url(../../img/bgimage.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -99,7 +99,7 @@ footer p {
           justify-content: center;
   min-height: 93vh;
   text-align: center;
-  background: url(../imgs/bg3.jpg);
+  background: url(../../img/bg3.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
